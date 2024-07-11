@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   vars:
-    repository_url: https://github.com/jaiswaladi246/secretsanta-generator.git
+    repository_url: https://github.com/HuseyinBeller/secretsanta-generator.git
   vars_files:
     - credentials.yml
   tasks:
@@ -60,7 +60,7 @@
         chdir: /home/ubuntu/secretsanta-generator
         
     - name: Build & Tag Docker Image
-      command: docker build -t adijaiswal/santa:latest .
+      command: docker build -t huseyinbeller/santa:latest .
       args:
         chdir: /home/ubuntu/secretsanta-generator
         
